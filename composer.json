@@ -16,6 +16,5 @@
     "autoload": {
         "psr-0": { "Rhapsody\\Commons": "lib/" }
     },
-    "target-dir": "Rhapsody/Commons",
     "minimum-stability": "dev"
 }
