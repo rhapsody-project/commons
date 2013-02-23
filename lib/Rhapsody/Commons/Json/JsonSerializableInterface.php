@@ -1,5 +1,5 @@
 <?php
-namespace Rhapsody\CommonsBundle\Json;
+namespace Rhapsody\Commons\Json;
 
 /**
  * <p>
