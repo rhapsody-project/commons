@@ -36,6 +36,7 @@
 */
 namespace Rhapsody\Commons\Markup\Markdown;
 
+use Rhapsody\Commons\Markup\MarkupParserInterface;
 
 const  MARKDOWN_VERSION  =  "1.0.1p";  # Sun 13 Jan 2013
 const  MARKDOWNEXTRA_VERSION  =  "1.2.6";  # Sun 13 Jan 2013
@@ -75,7 +76,7 @@ const  MARKDOWNEXTRA_VERSION  =  "1.2.6";  # Sun 13 Jan 2013
  * @see http://michelf.com/projects/php-markdown/
  * @see http://daringfireball.net/projects/markdown/
  */
-class Parser
+class Parser implements MarkupParserInterface
 {
 	const  MARKDOWNLIB_VERSION  =  "1.3-beta4";
 
@@ -160,8 +161,25 @@ class Parser
 		$this->html_hashes = array();
 	}
 
+	/**
+	 * (non-PHPdoc)
+	 * @see \Rhapsody\Commons\Markup\MarkupParserInterface::getName()
+	 */
+	public function getName()
+	{
+		return 'markdown';
+	}
 
-	function transform($text) {
+	/**
+	 * (non-PHPdoc)
+	 * @see \Rhapsody\Commons\Markup\MarkupParserInterface::parse()
+	 */
+	public function parse($text)
+	{
+		return $this->transform($text);
+	}
+
+	public function transform($text) {
 		#
 		# Main function. Performs some preprocessing on the input text
 		# and pass it through the document gamut.
