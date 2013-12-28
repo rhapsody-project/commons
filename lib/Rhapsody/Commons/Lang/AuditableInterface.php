@@ -43,12 +43,12 @@ interface AuditableInterface
 	/**
 	 *
 	 */
-	function getCreated();
+	function getAuthor();
 
 	/**
 	 *
 	 */
-	function getCreatedBy();
+	function getCreated();
 
 	/**
 	 *

@@ -41,16 +41,16 @@ trait AuditTrait
 {
 
 	/**
+	 * The reference to the user that created this object.
+	 * @var mixed
+	 */
+	protected $author;
+
+	/**
 	 * The date that this object was created.
 	 * @var \DateTime
 	 */
 	protected $created;
-
-	/**
-	 * The reference to the user that created this object.
-	 * @var mixed
-	 */
-	protected $createdBy;
 
 	/**
 	 * The date and time when the object was last modified.
@@ -64,14 +64,14 @@ trait AuditTrait
 	 */
 	protected $lastModifiedBy;
 
+	public function getAuthor()
+	{
+		return $this->author;
+	}
+
 	public function getCreated()
 	{
 		return $this->created;
-	}
-
-	public function getCreatedBy()
-	{
-		return $this->createdBy;
 	}
 
 	public function getLastModified()
@@ -84,14 +84,14 @@ trait AuditTrait
 		return $this->lastModifiedBy;
 	}
 
+	public function setAuthor($author)
+	{
+		$this->author = $author;
+	}
+
 	public function setCreated($created)
 	{
 		$this->created = $created;
-	}
-
-	public function setCreatedBy($createdBy)
-	{
-		$this->createdBy = $createdBy;
 	}
 
 	public function setLastModified($lastModified)
