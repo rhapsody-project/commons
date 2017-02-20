@@ -125,7 +125,7 @@ class BooleanUtils {
     }
 
     // no match
-    throw new \IllegalArgumentException("The String did not match any specified value");
+    throw new \InvalidArgumentException("The String did not match any specified value");
   }
 
   /**
