@@ -27,7 +27,7 @@
  */
 namespace Rhapsody\Commons\Collections;
 
-class MapCollection extends Collection
+class ArrayCollection extends Collection
 {
 
 }

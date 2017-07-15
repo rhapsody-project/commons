@@ -29,7 +29,7 @@ namespace Rhapsody\Commons\Collections;
 
 use Countable, IteratorAggregate, ArrayAccess;
 
-interface Collection extends Countable, IteratorAggregate, ArrayAccess
+interface CollectionInterface extends Countable, IteratorAggregate, ArrayAccess
 {
 
 }
